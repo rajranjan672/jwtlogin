@@ -24,7 +24,7 @@ const Home = () => {
         })}
     </div>
 
-    
+
     <div class="container">
         <div class="card">
             <div class="face face1">
