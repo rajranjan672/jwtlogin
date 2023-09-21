@@ -12,6 +12,7 @@ const Navbar = () => {
   const logout = () => {
     axios.get("http://localhost:3001/api/User/logout")
     navigate("/login")
+    
   }
 
   

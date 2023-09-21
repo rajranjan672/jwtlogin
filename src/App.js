@@ -3,6 +3,9 @@ import Register from "./component/Register";
 import Login from "./component/Login";
 import Home from "./component/Home";
 import Navbar from "./component/Navbar";
+import axios from "axios";
+
+const a = axios.defaults.withCredentials = true
 
 function App() {
   return (
@@ -10,7 +13,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Register />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/home" element={<Home />} />
+      {a?  <Route path="/home" element={<Home />} />: "UnAuthorised User"}
+     
 
     </Routes>
     
