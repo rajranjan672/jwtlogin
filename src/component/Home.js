@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import axios from 'axios'
-
+axios.defaults.withCredentials = true
 const Home = () => {
 
     const [data, setData] = useState([])
@@ -11,7 +11,7 @@ const Home = () => {
     })
 
     const gett = async() => {
-        const ress = await axios.get("http://localhost:3001/api/User/get", data, {withCredentials: true})
+        const ress = await axios.get("http://localhost:3001/api/User/get", data, )
         setData(ress.data)
     }
   return (
