@@ -22,10 +22,22 @@ const Navbar = () => {
     <ul>
         <li><NavLink to="/home" className="nav-item">Home</NavLink></li>
     </ul>
+   
     <ul>
-    <button type="button" className="btn btn-warning" onClick={logout}>Logout</button>
+    <ul>
+    <div class="dropdown" style={{float: "right", marginRight:"10px"}}>
+  <button class="dropbtn">Right</button>
+  <div class="dropdown-content">
+  <button type="button" className="btn btn-warning" onClick={logout}>Logout<i class="bi bi-arrow-right"></i></button>
+    
+    <a href="#">Link 3</a>
+  </div>
+</div>
+    </ul>
     </ul>
 </div>): "Unauthorised user"};
+
+
     </>
  
     

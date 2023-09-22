@@ -6,25 +6,45 @@ axios.defaults.withCredentials = true
 const Home = () => {
 
     const [data, setData] = useState([])
+    const [data1, setData1] = useState([])
+
 
     useEffect(() => {
         gett()
+        user()
     })
 
     const gett = async() => {
         const ress = await axios.get("http://localhost:3001/api/User/get", data, )
         setData(ress.data)
     }
+
+    const user = async() => {
+        const ress = await axios.get("http://localhost:3001/api/data/data", data1)
+        setData1(ress.data)
+    }
   return (
     <>
     <Navbar />
+    {data1.map((item) => {
+        <p>{item.email}</p>
+    })}
     <div>
         {data.map((item) => {
             <p>{item.username}</p>
         })}
     </div>
 
+    <div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </div>
 
+<i class="bi bi-person-fill"></i>
     <div class="container">
         <div class="card">
             <div class="face face1">
