@@ -2,8 +2,10 @@ import React, { useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import axios from 'axios'
 import "../component/Home.css"
-axios.defaults.withCredentials = true
+import Error from './Error'
+import { useNavigate } from 'react-router-dom'
 const Home = () => {
+    const a = axios.defaults.withCredentials = true
 
     const [data, setData] = useState([])
     const [data1, setData1] = useState([])
@@ -13,6 +15,11 @@ const Home = () => {
         gett()
         user()
     })
+
+    const navigate = useNavigate()
+    const card = () => {
+        navigate("/profile")
+    }
 
     const gett = async() => {
         const ress = await axios.get("http://localhost:3001/api/User/get", data, )
@@ -25,7 +32,8 @@ const Home = () => {
     }
   return (
     <>
-    <Navbar />
+    {a? <Navbar />: <Error />}
+    
     {data1.map((item) => {
         <p>{item.email}</p>
     })}
@@ -46,7 +54,7 @@ const Home = () => {
 
 <i class="bi bi-person-fill"></i>
     <div class="container">
-        <div class="card">
+        <div class="card" onClick={card}>
             <div class="face face1">
                 <div class="outer">
                     <h1 class="title">Canyons</h1>
