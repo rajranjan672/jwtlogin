@@ -79,7 +79,10 @@ const Register = () => {
                       <p className="mb-0 me-2">Don't have an account?</p>
                       <button type="button" className="btn btn-outline-danger" onClick={Login}>Login</button>
                     </div>
-  
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault">Default checkbox</label>
+                      </div>
                   </form>
   
                 </div>

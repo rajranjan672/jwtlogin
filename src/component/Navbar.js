@@ -29,7 +29,7 @@ const Navbar = () => {
   <button class="dropbtn">Right</button>
   <div class="dropdown-content">
   <button type="button" className="btn btn-warning" onClick={logout}>Logout<i class="bi bi-arrow-right"></i></button>
-    
+    <NavLink to="/profile" className="profile"><i class="bi bi-person-circle"> Profile</i></NavLink>
     <a href="#">Link 3</a>
   </div>
 </div>

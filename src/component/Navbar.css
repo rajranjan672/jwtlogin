@@ -63,6 +63,10 @@
     width: 100%;
   }
 
+  .profile:hover {
+    background-color: rgb(121, 121, 229) !important;
+  }
+
   .btn:hover {
     background-color: rgb(236, 41, 41) !important;
   }
