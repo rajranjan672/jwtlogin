@@ -8,13 +8,16 @@ const Home = () => {
     const a = axios.defaults.withCredentials = true
 
     const [data, setData] = useState([])
-    const [data1, setData1] = useState([])
+    // const [data1, setData1] = useState([])
 
 
     useEffect(() => {
+
         gett()
-        user()
+        
     })
+
+   
 
     const navigate = useNavigate()
     const card = () => {
@@ -22,26 +25,33 @@ const Home = () => {
     }
 
     const gett = async() => {
-        const ress = await axios.get("http://localhost:3001/api/User/get", data, )
-        setData(ress.data)
+         await axios.get("http://localhost:3001/api/User/get", data, {withCredentials: true} )
+        // setData(ress.data)
+        // console.log(ress.data)
     }
 
-    const user = async() => {
-        const ress = await axios.get("http://localhost:3001/api/data/data", data1)
-        setData1(ress.data)
-    }
+    // const user = async() => {
+    //     const ress = await axios.get("http://localhost:3001/api/data/data", data1)
+    //     setData1(ress.data)
+    // }
   return (
     <>
-    {a? <Navbar />: <Error />}
+     {a? <Navbar />: <Error />} 
     
-    {data1.map((item) => {
+    {/* {data1.map((item) => {
         <p>{item.email}</p>
-    })}
-    <div>
+    })} */}
+    
         {data.map((item) => {
-            <p>{item.username}</p>
+            
+   
+                return (
+                
+                    <p>{item.email}</p>
+                )
+            
         })}
-    </div>
+   
 
     <div>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

@@ -35,7 +35,7 @@ const Navbar = () => {
 </div>
     </ul>
     </ul>
-</div>): "Unauthorised user"};
+</div>): "Unauthorised user"}
 
 
     </>
