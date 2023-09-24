@@ -10,7 +10,6 @@ const Home = () => {
     const [data, setData] = useState([])
     // const [data1, setData1] = useState([])
 
-
     useEffect(() => {
 
         gett()
@@ -25,9 +24,12 @@ const Home = () => {
     }
 
     const gett = async() => {
-         await axios.get("http://localhost:3001/api/User/get", data, {withCredentials: true} )
-        // setData(ress.data)
-        // console.log(ress.data)
+       try{ const ress = await axios.get("http://localhost:3001/api/User/get",  {withCredentials: true} )
+         setData(ress.data)
+         console.log(ress.data)
+    } catch {
+        navigate("/login")
+    }
     }
 
     // const user = async() => {
@@ -36,21 +38,19 @@ const Home = () => {
     // }
   return (
     <>
-     {a? <Navbar />: <Error />} 
+      {a? <Navbar />: <Error />}  
     
     {/* {data1.map((item) => {
         <p>{item.email}</p>
     })} */}
     
-        {data.map((item) => {
             
    
-                return (
+               
                 
-                    <p>{item.email}</p>
-                )
+                    <p>{data.email}</p>
+                
             
-        })}
    
 
     <div>
