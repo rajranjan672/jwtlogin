@@ -42,13 +42,12 @@ const Navbar = () => {
    
     <ul>
       <ul>
-      <h2>{data.username}</h2>
       </ul>
     <ul>
     <div class="dropdown" style={{float: "right", marginRight:"10px"}}>
-  <button class="dropbtn">Right</button>
+  <button class="dropbtn">{data.username}</button>
   <div class="dropdown-content">
-  <button type="button" className="btn btn-warning" onClick={logout}>Logout<i class="bi bi-arrow-right"></i></button>
+  <button type="button" className="btn btn-warning" onClick={logout}>Logout<i class="bi bi-arrow-{data.username}"></i></button>
     <NavLink to="/profile" className="profile"><i class="bi bi-person-circle"> Profile</i></NavLink>
     <a href="#">Link 3</a>
   </div>
