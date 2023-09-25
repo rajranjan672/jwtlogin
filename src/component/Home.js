@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 const Home = () => {
     const a = axios.defaults.withCredentials = true
 
-    const [data, setData] = useState([])
+    const [data, setData] = useState({email: ''})
     // const [data1, setData1] = useState([])
 
     useEffect(() => {
@@ -45,7 +45,10 @@ const Home = () => {
     })} */}
     
             
-   
+                {/* <form>
+                    <label htmlFor='email'>Email</label>
+                    <input id='email' name='email' type='text' defaultValue={data.email} onChange={e => {setData({...data, email: e.target.value})}} />
+                </form> */}
                
                 
                     <p>{data.email}</p>
