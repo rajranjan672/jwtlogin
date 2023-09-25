@@ -14,7 +14,7 @@ const Home = () => {
 
         gett()
         
-    })
+    }, [data.email])
 
    
 
@@ -38,7 +38,7 @@ const Home = () => {
     // }
   return (
     <>
-      {a? <Navbar />: <Error />}  
+      {a? <Navbar  />: <Error />}  
     
     {/* {data1.map((item) => {
         <p>{item.email}</p>

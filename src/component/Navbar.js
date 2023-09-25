@@ -5,7 +5,7 @@ import { Button } from 'bootstrap'
 import axios from 'axios'
  const a = axios.defaults.withCredentials = true
 
-const Navbar = () => {
+const Navbar = (props) => {
 
   const navigate = useNavigate()
 
@@ -26,6 +26,7 @@ const Navbar = () => {
     <ul>
     <ul>
     <div class="dropdown" style={{float: "right", marginRight:"10px"}}>
+      <h2>{props.email}</h2>
   <button class="dropbtn">Right</button>
   <div class="dropdown-content">
   <button type="button" className="btn btn-warning" onClick={logout}>Logout<i class="bi bi-arrow-right"></i></button>
