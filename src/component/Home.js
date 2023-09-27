@@ -11,6 +11,7 @@ const Home = () => {
     const [data, setData] = useState({email: ''})
     const [countOfProgess, setCountOfProgess] = useState(0);
     let [showprogress, setShowprogress] = useState(false)
+    const [inputValue, setInputValue] = useState(false);
 
     // const [data1, setData1] = useState([])
 
@@ -32,6 +33,11 @@ const Home = () => {
     const navigate = useNavigate()
     const card = () => {
         navigate("/profile")
+    }
+
+    const checked = () => {
+        setInputValue(!inputValue)
+        console.log(inputValue)
     }
 
     const gett = async() => {
@@ -63,14 +69,25 @@ const Home = () => {
                
                 
                     <p>{data.email}</p>
-                    
-                    <button className='btn btn-primary' onClick={() =>   setInterval(() => {
-                     setShowprogress(showprogress=true)  
+                    <form onSubmit={((e) => e.preventDefault())}>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox"  id="invalidCheck" onClick={ () => checked()} required />
+                        <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                        </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+                    <button className='btn btn-primary'  type='submit'  disabled={inputValue == false} onClick={() =>   setInterval((e) => {
+                     setShowprogress(showprogress=true)
         setCountOfProgess((oldProgress) => {
           if (100 == oldProgress) return navigate("/profile")
           return Math.min(oldProgress + Math.random() * 10, 100);
         });
       }, 499)}>Submit</button>
+                    </form>
+      
                 
           {showprogress? <div style={{ display: 'block',
                   width: 700, padding: 30 }}>
