@@ -10,6 +10,7 @@ const Home = () => {
 
     const [data, setData] = useState({email: ''})
     const [countOfProgess, setCountOfProgess] = useState(0);
+    let [showprogress, setShowprogress] = useState(false)
 
     // const [data1, setData1] = useState([])
 
@@ -63,19 +64,20 @@ const Home = () => {
                 
                     <p>{data.email}</p>
                     
-                    <button className='btn btn-primary' onClick={() => setInterval(() => {
+                    <button className='btn btn-primary' onClick={() =>   setInterval(() => {
+                     setShowprogress(showprogress=true)  
         setCountOfProgess((oldProgress) => {
           if (100 == oldProgress) return navigate("/profile")
           return Math.min(oldProgress + Math.random() * 10, 100);
         });
       }, 499)}>Submit</button>
                 
-                    <div style={{ display: 'block',
+          {showprogress? <div style={{ display: 'block',
                   width: 700, padding: 30 }}>
       <h4>React-Bootstrap ProgressBar Component</h4>
       Current Progress is: {parseInt(countOfProgess)} %
       <ProgressBar now={countOfProgess} />
-    </div>
+    </div>: ""}         
    
 
     <div>
