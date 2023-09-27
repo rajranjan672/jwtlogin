@@ -65,7 +65,7 @@ const Home = () => {
                     
                     <button className='btn btn-primary' onClick={() => setInterval(() => {
         setCountOfProgess((oldProgress) => {
-          if (100 == oldProgress) return alert('Submit')
+          if (100 == oldProgress) return navigate("/profile")
           return Math.min(oldProgress + Math.random() * 10, 100);
         });
       }, 499)}>Submit</button>
