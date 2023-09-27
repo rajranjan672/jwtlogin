@@ -36,6 +36,7 @@ const Navbar = () => {
   return (
     <>
        {a ? (<div className='navbar'>
+        
     <ul>
         <li><NavLink to="/home" className="nav-item">Home</NavLink></li>
     </ul>

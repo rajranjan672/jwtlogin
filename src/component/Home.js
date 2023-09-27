@@ -3,19 +3,29 @@ import Navbar from './Navbar'
 import axios from 'axios'
 import "../component/Home.css"
 import Error from './Error'
+import ProgressBar from 'react-bootstrap/ProgressBar';
 import { useNavigate } from 'react-router-dom'
 const Home = () => {
     const a = axios.defaults.withCredentials = true
 
     const [data, setData] = useState({email: ''})
+    const [countOfProgess, setCountOfProgess] = useState(0);
+
     // const [data1, setData1] = useState([])
 
     useEffect(() => {
 
         gett()
         
+         
+          
+        
     }, [data.email])
-
+     
+   
+    //   return () => {
+    //     clearInterval(timer);
+    //   };
    
 
     const navigate = useNavigate()
@@ -52,8 +62,20 @@ const Home = () => {
                
                 
                     <p>{data.email}</p>
+                    
+                    <button className='btn btn-primary' onClick={() => setInterval(() => {
+        setCountOfProgess((oldProgress) => {
+          if (100 == oldProgress) return alert('Submit')
+          return Math.min(oldProgress + Math.random() * 10, 100);
+        });
+      }, 499)}>Submit</button>
                 
-            
+                    <div style={{ display: 'block',
+                  width: 700, padding: 30 }}>
+      <h4>React-Bootstrap ProgressBar Component</h4>
+      Current Progress is: {parseInt(countOfProgess)} %
+      <ProgressBar now={countOfProgess} />
+    </div>
    
 
     <div>
@@ -64,6 +86,7 @@ const Home = () => {
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                     exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </div>
+    
 
 <i class="bi bi-person-fill"></i>
     <div class="container">
@@ -116,6 +139,8 @@ const Home = () => {
             </div>
         </div>
     </div>
+
+    
 
     </>
   )

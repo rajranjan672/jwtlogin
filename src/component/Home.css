@@ -104,3 +104,9 @@ a:hover{
     top: 135px;
     color: #fff;
 }
+
+.scrollspy-example-collapsible {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+  }
