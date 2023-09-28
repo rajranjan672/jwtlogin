@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Navbar from './Navbar'
 import axios from 'axios'
 import "../component/Home.css"
 import Error from './Error'
+import { LoremPicsum } from 'react-lorem-picsum'
 import ProgressBar from 'react-bootstrap/ProgressBar';
 import { useNavigate } from 'react-router-dom'
+import JSONDATA from "./data.json"
 const Home = () => {
     const a = axios.defaults.withCredentials = true
 
@@ -12,13 +14,15 @@ const Home = () => {
     const [countOfProgess, setCountOfProgess] = useState(0);
     let [showprogress, setShowprogress] = useState(false)
     const [inputValue, setInputValue] = useState(false);
+    const[api, setApi] = useState([])
+    const [inputText, changeText] = useState("")
+ 
 
     // const [data1, setData1] = useState([])
 
     useEffect(() => {
 
         gett()
-        
          
           
         
@@ -49,6 +53,12 @@ const Home = () => {
     }
     }
 
+    // const cardget = async() => {
+    //     const ress = await axios.get('https://picsum.photos')
+    //     setApi(ress)
+    //     console.log(ress)
+    // }
+
     // const user = async() => {
     //     const ress = await axios.get("http://localhost:3001/api/data/data", data1)
     //     setData1(ress.data)
@@ -70,6 +80,7 @@ const Home = () => {
                 
                     <p>{data.email}</p>
                     <form onSubmit={((e) => e.preventDefault())}>
+                        
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox"  id="invalidCheck" onClick={ () => checked()} required />
                         <label class="form-check-label" for="invalidCheck">
@@ -87,14 +98,18 @@ const Home = () => {
         });
       }, 499)}>Submit</button>
                     </form>
-      
-                
+                    <div className='container'>
+                            <div className='row'>
+                                         
           {showprogress? <div style={{ display: 'block',
                   width: 700, padding: 30 }}>
       <h4>React-Bootstrap ProgressBar Component</h4>
       Current Progress is: {parseInt(countOfProgess)} %
       <ProgressBar now={countOfProgess} />
-    </div>: ""}         
+    </div>: ""} 
+                            </div>
+                        </div>
+               
    
 
     <div>
@@ -109,7 +124,7 @@ const Home = () => {
 
 <i class="bi bi-person-fill"></i>
     <div class="container">
-        <div class="card" onClick={card}>
+        <div class="cardd" onClick={card}>
             <div class="face face1">
                 <div class="outer">
                     <h1 class="title">Canyons</h1>
@@ -125,7 +140,7 @@ const Home = () => {
             </div>
         </div>
 
-        <div class="card">
+        <div class="cardd">
             <div class="face face1">
                 <div class="outer">
                     <h1 class="title">Beaches</h1>
@@ -142,7 +157,7 @@ const Home = () => {
             </div>
         </div>
 
-        <div class="card">
+        <div class="cardd">
             <div class="face face1">
                 <div class="outer">
                     <h1 class="title">Trees</h1>
@@ -158,8 +173,48 @@ const Home = () => {
             </div>
         </div>
     </div>
+    <div className='container'>
+                <div className='row p-0'>
+                <div className="search">
+        <input
+          type="text"
+          placeholder="Search book.."
+          onChange={(event) => {
+            changeText(event.target.value);
+          }}
+        />
+      </div>
 
+      {JSONDATA.filter((val) => {
+            if (val.name.toLowerCase().includes(inputText.toLowerCase())) {
+              return val;
+            }
+          }).map((val) => {
+            return (
+             
+                
+                <div className="card" >
+                  <LoremPicsum
+                    width={250}
+                    height={150}
+                    random={Math.floor(Math.random() * 100)}
+                    
+                  >
+                 
+                  </LoremPicsum>
+                  <h4>{val.name}</h4>
+                <p>{val.author}</p>
+            </div>
+                
+           
+
+        )
     
+    })} 
+    </div>
+            </div>
+
+   
 
     </>
   )

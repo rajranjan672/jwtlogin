@@ -1,0 +1,10 @@
+[
+    { "id": 1, "name": "bbernollet0", "author": "Blithe", "price": 102 },
+    { "id": 2, "name": "sternouth2", "author": "Sharline", "price": 157 },
+    { "id": 1, "name": "bbernollet3", "author": "IFJ", "price": 102 },
+    { "id": 2, "name": "sternouth4", "author": "DIBJ", "price": 157 },
+    { "id": 1, "name": "bbernollet5", "author": "AKSNDF", "price": 102 },
+    { "id": 2, "name": "sternouth6", "author": "SDG", "price": 157 },
+    { "id": 1, "name": "bbernollet7", "author": "SKPMDG", "price": 102 },
+    { "id": 2, "name": "sternouth8", "author": "OIN", "price": 157 }
+]
