@@ -12,10 +12,11 @@
 }
 
 .nav-item {
-    margin: 3px;
+    margin: 10px;
     padding: 5px;
     color: white;
     text-decoration: none;
+    outline: none;
     
     
 }
@@ -62,7 +63,11 @@
   .btn{
     width: 100%;
   }
-
+  
+  .profile{
+    outline: none;
+    background-color: pink;
+  }
   .profile:hover {
     background-color: rgb(121, 121, 229) !important;
   }

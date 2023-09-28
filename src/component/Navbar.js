@@ -39,9 +39,14 @@ const Navbar = () => {
         
     <ul>
         <li><NavLink to="/home" className="nav-item">Home</NavLink></li>
+        <li><NavLink to="/about" className="nav-item">About</NavLink></li>
+        <li><NavLink to="/contact" className="nav-item">Contact</NavLink></li>
+
+
     </ul>
-   
-    <ul>
+    
+          
+    
       
     <ul>
     <div className="dropdown" style={{float: "right"}}>
@@ -53,7 +58,7 @@ const Navbar = () => {
   </div>
 </div>
     </ul>
-    </ul>
+    
 </div>): "Unauthorised user"}
 
 

@@ -17,11 +17,11 @@ const Profile = () => {
       </div>
       <div className="card__collection clear-fix">
         <div className="cards cards--two">
-          <img
+          {/* <img
             src="https://images.unsplash.com/photo-1504703395950-b89145a5425b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d702cb99ca804bffcfa8820c46483264&auto=format&fit=crop&w=651&q=80"
             className="img-responsive"
             alt="Cards Image"
-          />
+          /> */}
           <span className="cards--two__rect"></span>
           <span className="cards--two__tri"></span>
           <p>Lucy Grace</p>
