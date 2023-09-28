@@ -39,6 +39,7 @@
   }
   
   .dropdown {
+    margin-right: 15px !important;
     position: relative;
     display: inline-block;
   }

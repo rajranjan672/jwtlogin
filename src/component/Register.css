@@ -1,7 +1,10 @@
 .register {
     width: 100vw !important;
     height: 90vh !important;
-  background-image: url("https://images.unsplash.com/photo-1682687981603-ae874bf432f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  background-image: url("https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80");
 }
 
 .register .gradient-custom-2 {
@@ -31,6 +34,10 @@
     border-top-right-radius: 0.3rem;
     border-bottom-right-radius: 0.3rem;
   }
+}
+
+.register .card{
+    background-color: rgb(210, 184, 188);
 }
 
 
