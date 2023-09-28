@@ -40,7 +40,7 @@ const Register = () => {
               <div className="col-lg-6">
                 <div className="card-body p-md-5 mx-md-4">
   
-  
+
                   <form onSubmit={sub}>
                     <p>Please Register your account</p>
 
