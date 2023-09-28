@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-
+import "./Register.css"
 const Login = () => {
 
     const [data, setData] = useState({
@@ -41,6 +41,7 @@ const Login = () => {
 
   return (
     <>
+    <div className='register'>
     <section className="h-100 gradient-form" style={{backgroundClip: '#eee'}}>
     <div className="container py-3 h-100">
       <div className="row d-flex justify-content-center align-items-center h-100">
@@ -50,11 +51,7 @@ const Login = () => {
               <div className="col-lg-6">
                 <div className="card-body p-md-5 mx-md-4">
   
-                  <div className="text-center">
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp"
-                      style={{width: '185px'}} alt="logo" />
-                    <h4 className="mt-1 mb-5 pb-1">We are The Lotus Team</h4>
-                  </div>
+                  
   
                   <form onSubmit={sub}>
                     <p>Please Login</p>
@@ -104,6 +101,8 @@ const Login = () => {
       </div>
     </div>
   </section>
+    </div>
+   
     </>
   )
 }
