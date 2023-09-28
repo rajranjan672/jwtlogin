@@ -65,7 +65,6 @@ const Home = () => {
     // }
   return (
     <>
-      {a? <Navbar  />: <Error />}  
 
       <div className='home'>
     
@@ -83,7 +82,7 @@ const Home = () => {
             You must agree before submitting.
             </div>
             </div>
-                <button className='btn btn-primary'  type='submit'  disabled={inputValue == false} onClick={() =>   setInterval((e) => {
+                <button className='btn btn-primary col-8 col-sm-6 col-md-4 col-lg-2 mx-2 my-2'  type='submit'  disabled={inputValue == false} onClick={() =>   setInterval((e) => {
                 setShowprogress(showprogress=true)
             setCountOfProgess((oldProgress) => {
             if (100 == oldProgress) return navigate("/profile")

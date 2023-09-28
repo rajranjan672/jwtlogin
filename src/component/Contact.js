@@ -5,7 +5,6 @@ import Error from './Error'
 const Contact = () => {
   return (
     <>
-       <Navbar />  
       <div>Contact</div>
 
     </>
