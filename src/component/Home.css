@@ -51,17 +51,24 @@
     padding: 0 !important;
     margin: 12px !important;
     cursor: pointer;
+    opacity: .8;
+
     /* display: flex; */
     /* height: 200px !important; */
 }
 
 .card:hover{
-    border-radius: 10px !important;
+    /* border-radius: 10% !important; */
     transform: scale(1.1) !important;
+    opacity: 1;
 
 }
 
+.LoremPicsum{
+    overflow: hidden !important;
+    border-radius: 10% !important;
 
+}
 
 .cardd:hover .face.face1{
     transform: translateY(0);

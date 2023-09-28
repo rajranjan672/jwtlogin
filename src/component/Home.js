@@ -198,10 +198,9 @@ const Home = () => {
                     width={250}
                     height={150}
                     random={Math.floor(Math.random() * 100)}
-                    
-                  >
+                    style={{hover: 'border-radius: 10% !important;'}}
+                  />
                  
-                  </LoremPicsum>
                   <h4>{val.name}</h4>
                 <p>{val.author}</p>
             </div>
