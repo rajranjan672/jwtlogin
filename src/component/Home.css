@@ -61,6 +61,14 @@
     /* border-radius: 10% !important; */
     transform: scale(1.1) !important;
     opacity: 1;
+    box-shadow: inset 0 0 40px whitesmoke,
+    inset 10px 0 40px rgb(248, 103, 248),
+    inset -20px 0 40px rgb(55, 240, 240),
+    inset 10px 0 200px rgb(248, 160, 248),
+    inset -20px 0 300px rgb(3, 246, 246),
+    0 0 50px #fff,
+    -10px 0 40px rgb(238, 151, 238),
+    10px 0 40px rgb(20, 246, 246);
 
 }
 
