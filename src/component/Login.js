@@ -36,7 +36,7 @@ const Login = () => {
     }
 
     const Register = () => {
-        navigate("/")
+        navigate("/register")
     }
 
   return (

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Red, Navigate} from "react-router-dom";
 import Register from "./component/Register";
 import Login from "./component/Login";
 import Home from "./component/Home";
@@ -18,10 +18,12 @@ function App() {
 
     </div>
     <Routes>
-      <Route path="/" element={<Register />} />
+      <Route path="/register" element={<Register />} />
       <Route path="/login" element={<Login />} />
       <Route path="/profile" element={<Profile />} />
-      {a?  <Route path="/home" element={<Home />} />: "UnAuthorised User"}
+      {/* <Redirect exact from="/" to="home" /> */}
+      <Route path="/" element={<Navigate to="/home"/>} />
+       {a?  <Route path="/home" defaults element={<Home />} />: "UnAuthorised User"} 
       {a?  <Route path="/about" element={<About />} />: "UnAuthorised User"}
       {a?  <Route path="/contact" element={<Contact />} />: "UnAuthorised User"}
      

@@ -78,5 +78,7 @@
     background-color: rgb(236, 41, 41) !important;
   }
   .dropdown-content a:hover {background-color: #a9d7e4; transform: translateY(-0.2rem) !important;} 
-  .dropdown:hover .dropdown-content {display: block; transform: translateY(-0.2rem) !important;}
-  .dropdown:hover .dropbtn {background-color: #3e8e41; transform: translateY(-0.2rem);}
+  .dropdown:hover .dropdown-content {display: block;}
+  .dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+  .dropbtn:hover .dropdown-content{transform: translateY(-0.2rem) !important; }

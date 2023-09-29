@@ -3,6 +3,7 @@
     margin: auto !important;
     top: 50 !important ;
     background-color: rgb(243, 255, 252);
+    border-radius: 15px;
 }
 
 .about .card-text {
