@@ -14,6 +14,12 @@
     
 }
 
+.about .container .tabs .card:hover {
+    transform: scale(1.1) !important;
+    background-color: rgb(244, 217, 235) !important;
+    
+}
+
 .about .container .tabs .card .btn{
     position: absolute;
     width: 95% !important;
