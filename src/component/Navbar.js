@@ -27,6 +27,7 @@ const Navbar = () => {
     try{ const ress = await axios.get("http://localhost:3001/api/User/get",  {withCredentials: true} )
       setData(ress.data)
       console.log(ress.data)
+      console.log(ress.data.username)
  } catch {
      navigate("/login")
  }

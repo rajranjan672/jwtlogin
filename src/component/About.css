@@ -1,3 +1,25 @@
 .about .card {
-    height: 200px !important;
+    height: 300px !important;
+    margin: auto !important;
+    top: 50 !important ;
+    background-color: rgb(243, 255, 252);
+}
+
+.about .card-text {
+    text-transform: uppercase !important;
+}
+
+.about .container .tabs .card {
+    height: 30vh !important;
+    
+}
+
+.about .container .tabs .card .btn{
+    position: absolute;
+    width: 95% !important;
+   bottom: 10px !important;
+}
+
+.about .container .tabs .card .btn:hover{
+    background-color: rgb(112, 157, 239) !important;
 }
