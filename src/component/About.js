@@ -69,6 +69,18 @@ const About = () => {
           
         </div>
         </div>
+<hr />
+        <div className='navs'>
+        <div className='row'>
+          <div className='col-10 col-sm-8 col-md-8 col-lg-3'>
+            <h2>navs</h2>
+            <div className='card'>
+              <p>Hello</p>
+            </div>
+          </div>
+        </div>
+        </div>
+      
         
        </div>
         </div> 
