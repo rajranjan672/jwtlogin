@@ -53,9 +53,9 @@ const Navbar = () => {
     <div className="dropdown" style={{float: "right"}}>
   <button className="dropbtn">{data.username}</button>
   <div className="dropdown-content">
-  <button type="button" className="btn btn-warning" onClick={logout}>Logout<i className="bi bi-arrow-{data.username}"></i></button>
+  {/* <button type="button" className="btn btn-warning" onClick={logout}>Logout<i className="bi bi-arrow-{data.username}"></i></button> */}
     <NavLink to="/profile" className="profile"><i className="bi bi-person-circle"> Profile</i></NavLink>
-    <a href="#">Link 3</a>
+    {/* <a href="#">Link 3</a> */}
   </div>
 </div>
     </ul>

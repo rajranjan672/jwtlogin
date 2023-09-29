@@ -13,7 +13,10 @@ const a = axios.defaults.withCredentials = true
 function App() {
   return (
     <BrowserRouter>
+    <div style={{paddingBottom:"100px"}}>
     <Navbar />
+
+    </div>
     <Routes>
       <Route path="/" element={<Register />} />
       <Route path="/login" element={<Login />} />
